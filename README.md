@@ -82,6 +82,9 @@ To uninstall application run below command:
     
 `helm uninstall niotis`
 
+## **Additional Information**
+NIO_TIS is part of the Nabstract NEF Product Portfolio, and it is the first service launched. Nabstract will release other NEF services periodically.  
+
 
 ## **Related material**
 * https://nabstract.io/
