@@ -1,2 +1,3 @@
-# niotis
-Deploy NIOTIS Application using helm-chart.
+SPDX-License-Identifier: Apache-2.0
+Copyright (c) 2021 DeepSight AI Labs
+
