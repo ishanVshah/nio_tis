@@ -26,40 +26,21 @@ This document assumes that the Intel openness was installed through the openness
 
 | **Resource Information**           |                      |
 |------------------------------------|----------------------|
-| Helm                  | Video-Analytics		  | 
-| Host OS                 | 8                    |  
-| Compute* (vCores)                     | 16 GB                |  
-| RAM 				                   | 200  GB              |  
-| Storage                            | CentOS 7.6.1810      | 
-| CPU
+| Helm                               | v3.1.2		            | 
+| Host OS                            | CentOS 7.9.2009      |  
+| Compute* (vCores)                  | Minimum 4 to 8       |  
+| RAM 				                       | Minimum 8GB          |  
+| Storage                            | 100GB SSD            | 
+| CPU                                | Intel Xeon scalable Processors |
   
-
-
 ## **Where to Purchase**
-Contact nishant@deepsightlabs.com
+Contact info@nabstract.io
 
+## Installing nio_tis Application using helm
 
-## Pre Requisites - Installing OpenNESS
-|**Configuration**                   |                       |
-|  ----------------------------------|-----------------------|
-| OpenNESS Version                   | 20.12.02		         |
-| Flavor Used 					     | Minimal				 |
-| Distribution						 | OpenSource    	     |
+The NIO_TIS is available in the open-ness/edgeapps repository. To obtain it, just clone the repo.
 
-
-Follow below link to setup controller and edge-node for installing OpenNESS.
-
-https://github.com/open-ness/specs/blob/openness-20.12.02/doc/getting-started/network-edge/controller-edge-node-setup.md
-
-* Go to openness-experience-kits/ directory and comment out the grub role (role: machine_setup/grub) in the **network_edge.yml** file.
-* Run the deployment script as ./deploy_ne.sh 
-
-## Loading Docker Images
-docker image load -i dsal_openvino_v2.tar.gz
-
-## Installing SuperSecure Application using helm
-
-Run the following commands to deploy  through helm:
+`git clone https://github.com/open-ness/edgeapps`
 
 `helm install supersecure ./`
 
