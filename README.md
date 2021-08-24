@@ -40,49 +40,48 @@ Contact info@nabstract.io
 
 The NIO_TIS is available in the open-ness/edgeapps repository. To obtain it, just clone the repo.
 
-`git clone https://github.com/open-ness/edgeapps`
+`$git clone https://github.com/open-ness/edgeapps`
 
-`helm install supersecure ./`
+
+ Then, into applications/nio_tis folder there is helm chart folder for installing it.
+
+`$cd nio_tis `
+
+ Install the Chart
+
+`helm install niotis ./niotis/`
 
  Sample Output would look like:
-
-> `NAME: supersecure`
->
-> `LAST DEPLOYED:`
->
+ 
+> `NAME: niotis`
+> 
+> `LAST DEPLOYED: Mon Jul 12 11:14:41 2021`
+> 
 > `NAMESPACE: default`
->
+> 
 > `STATUS: deployed`
->
+> 
 > `REVISION: 1`
->
-> `TEST SUITE: None`
->
-> `NOTES:`
->
-> `# SPDX-License-Identifier: Apache-2.0`
 > 
-> `# Copyright (c) 2021 DeepSight AI Labs`
+> `NOTES:1`
 > 
-> `deepsight-supersecure was installed.`
-> 
-> `Your release is named supersecure.`
-> 
+> `1. Get the application URL by running these commands:
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services niotis)
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT`
+
 > `To learn more about the release, try:`
 > 
-> `$ helm status supersecure`
+> `$ helm status nio_tis`
 > 
-> `$ helm get supersecure`
+> `$ helm get nio_tis`
 
 
 ## Uninstall SuperSecure application
 To uninstall application run below command:
     
-`helm uninstall supersecure`
+`helm uninstall niotis`
 
-## Testing Steps
-For further instructions about steps for testing, contact Nishant (nishant@deepsightlabs.com)
 
 ## **Related material**
-* https://deepsightlabs.com/
-
+* https://nabstract.io/
